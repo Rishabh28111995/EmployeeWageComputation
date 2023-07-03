@@ -20,7 +20,7 @@ namespace EmployeeManagement
 				empHrs = 0;
 			}
 			empWage = empHrs * EMP_RATE;
-			Console.WriteLine("Emp Wage :" + empWage);
+			Console.WriteLine("Emp Wage : " + empWage);
 
         }
 	}
