@@ -1,4 +1,4 @@
-﻿namespace EmployeeeWage;
+namespace EmployeeeWage;
 class Program
 
 {
@@ -8,7 +8,9 @@ class Program
     public const int Num_Days = 20;
     public const int Max_Working_Hrs_Month = 100;
 
-   public static void empWage()
+
+    public static int empWage(string company, int Emp_Rate_hr, int Num_Days, int Max_Working_Hrs_Month)
+
     {
         int empHrs = 0;
         int totalEmpHrs = 0;
@@ -33,16 +35,18 @@ class Program
                     break;
             }
 
-                    totalEmpWage += empHrs;
+                    totalEmpHrs += empHrs;
                     Console.WriteLine("Day : " + totalWorkingDays + "Emp Hrs : " + empHrs);
             }
         totalEmpWage = totalEmpHrs * Emp_Rate_hr;
-        Console.WriteLine("Total emp wage : " + totalEmpWage);
+        Console.WriteLine("Total emp wage for company : " + company + "is" + totalEmpWage);
+        return totalEmpWage;
     }
 
     static void Main(string[] args)
     {
-        empWage();
+        empWage("DMart", 20, 2, 10);
+        empWage("Reliance", 10, 4, 20);
     }
-}
+}}
 
